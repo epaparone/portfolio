@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Elizabeth Paparone Portfolio</title>
+        <meta name='description' content='portfolio site html wireframe'>
+        <meta name='viewport' content='width=device-width'>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+        <link href='main.css' rel='stylesheet'/>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 id='title'>Elizabeth M Paparone</h1>
+            <h2 id='tagline'>Full-Stack Developer, Web Designer</h2>
+            <nav class='main-nav'>
+                <ul>
+                    <li><a class='nav-button' href='.nav'>About Me</a></li>
+                    <li><a class='nav-button' href='.nav'>Projects</a></li>
+                    <li><a class='nav-button' href='.nav'>Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class='about-page'>
+                <!-- image will go here <img> -->
+                <div class='h3-wrap'>
+                    <h3 class='page-title'>About Me</h3>
+                </div>
+                <article class='bio-body'>
+                    <p>
+                        I am a web developer growing my depth and breadth of skills as a Bloc Web Development Track bootcamp student. 
+                        I’m a front-end enthusiast at my core. I love the process of taking a beautifully rendered but static design, 
+                        breaking it down into its elements, and rebuilding that puzzle out of code to create an impactful user experience. 
+                        I believe in using tech to increase social good – to use this incredible power and knowledge in our fingertips 
+                        to empower nonprofits, social enterprises, and businesses to achieve their missions and better their communities.
+                    </p>
+                    <p>
+                        Often I can be found coding or designing next to an ever-present cup of coffee. When I’m not, you’ll find me 
+                        talking business strategy with my cofounder of Wolf & Wing Creative, seeking out a new adventure on a hike, 
+                        or exploring a new city. A lifelong learner, I always have a project. Aside from coding, my current learning 
+                        projects are hand lettering and the science behind good cooking.
+                    </p>
+                </article>
+            </section>
+
+            <section class='projects-page'>
+                <!-- image will go here <img> -->
+                <div class='h3-wrap'>
+                    <h3 class='page-title'>Projects</h3>
+                </div>
+                <section class='project-list'>
+                <!-- this will function as an array of objects so it can easily be added to -->
+                    <section class='project-item'>
+                        <h4>Quiz App</h4>
+                        <h5>Concept, Design, Development</h5>
+                        <!-- image will go here <img> -->
+                        <p class='project-description'>
+                                AstroQuiz is a Buzzfeed-style quiz app that prompts users to answer a series of astrology quiz questions 
+                                and provides feedback tailored to their performance. It provides a mobile-friendly, accessible UI using 
+                                DOM manipulation. 
+                        </p>
+                        <ul class='tech-used'>
+                            <li><!--icon here-->HTML5</li>
+                            <li><!--icon here-->CSS3</li>
+                            <li><!--icon here-->JavaScript</li>
+                        </ul>
+                        <button type='submit' class='project-function' name='Live Site'>Live</button>
+                        <button type='submit' class='project-function' name='Site Repo'>Repo</button>
+                    </section>
+                </section>
+            </section>
+
+            <section class='contact-page'>
+                <div class='h3-wrap'>
+                    <h3 class='page-title'>Contact</h3>
+                </div>
+                <p>Currently seeking a full time junior developer role.</p>
+                <ul class='contact-list'>
+                    <li><a href='.link'>Email</a></li>
+                    <li><a href='.link'>LinkedIn</a></li>
+                    <li><a href='.link'>GitHub</a></li>
+                    <li><a href='.link'>W&W</a></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <!-- logo/image will go here <img> -->
+            <h1>Elizabeth M Paparone</h1>
+            <h2>Full-Stack Developer, Web Designer.</h2>
+            <ul class='footer-nav'>
+                <li><a>Email</a></li>
+                <li><a>LinkedIn</a></li>
+                <li><a>GitHub</a></li>
+                <li><a>W&W</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
