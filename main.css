@@ -417,8 +417,8 @@ footer h2 {
         background-size: 310px;
     }
 
-    .project-img {
-        width: 80%;
+    .project-img, .about-img {
+        width: 85%;
     }
 
     .footer-img {
@@ -494,9 +494,28 @@ footer h2 {
 
     footer h1 {
         font-size: 20px;
+        margin-top: 40px;
     }
 
     footer h2 {
         font-size: 16px;
+    }
+}
+
+/* large desktop displays */
+@media screen and (min-width: 1300px) {
+    header, main {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    body {
+        background-size: 340px;
+    }
+
+    .footer-img {
+        width: 20%;
+        margin-bottom: -70px;
     }
 }
