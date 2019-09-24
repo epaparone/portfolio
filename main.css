@@ -29,9 +29,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+
 ol, ul {
 	list-style: none;
 }
@@ -48,11 +46,25 @@ table {
 	border-spacing: 0;
 }
 
+/* jQuery styling */
+.hide {
+    display: none;
+}
+
 /* begin content styling */
 
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+}
+
+body {
+    line-height: 1;
+    background-image: url(https://user-images.githubusercontent.com/39974667/65441458-f0fa6080-de19-11e9-9547-63e01f00ac83.png);
+    background-color: #FEFDFC;
+    background-position: top right;
+    background-size: 150px;
+    background-repeat: no-repeat;
 }
 
 /* section styling */
@@ -61,16 +73,19 @@ header {
     padding: 30px;
     margin: 10px 10px 40px 10px;
     font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+} 
+
+nav {
+    display: inline-block;
+
 }
 
 nav ul {
     list-style: none;
 }
 
-footer {
-    padding: 30px;
-    margin: 10px 10px 40px 10px;
-    font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+section {
+    margin-top: 30px;
 }
 
 main {
@@ -83,26 +98,44 @@ section {
     padding: 10px 0;
 }
 
-
-.contact-list li, .tech-used li {
-    display: block;
-    margin: 5px 5px 0 0;
+.tech-used li {
+    display: inline-block;
+    margin: 5px 5px 20px 0;
     padding: 5px;
-    width: 80px;
+}
+
+.contact-info {
+    padding-top: 30px;
+    text-align: center;
+}
+
+footer {
+    margin: 10px auto;
+    font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+    text-align: center;
 }
 
 .footer-nav li {
     display: inline-block;
     margin: 5px 5px 0 0;
     padding: 5px;
-    width: 60px;
 }
 
-/* button & icon styling */
+.footer-info {
+    background-color: rgba(204, 218, 209, 0.5);
+    padding-top: 40px;
+}
 
-button {
+/* button, icon, img styling */
+
+.project-links {
+    text-align: center;
+    margin: 20px;
+}
+
+.project-function {
     font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -114,9 +147,9 @@ button {
     text-align: center;
 }
 
-button:hover {
+.project-function:hover {
     font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -128,40 +161,69 @@ button:hover {
     text-align: center;
 }
 
+img {
+    display: block;
+    margin: 25px auto;
+}
+
+.about-img, .project-img {
+    width: 95%;
+}
+
+.footer-img {
+    width: 45%;
+    margin-bottom: -40px;
+}
+
+.tech-icon, .contact-icon {
+    display: inline-block;
+    height: 20px;
+}
+
+.contact-list img {
+    margin-bottom: 10px;
+    height: 30px;
+    display: inline-block;
+}
 
 /* text styling */
 
 h1 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     letter-spacing: 4px;
     text-transform: uppercase; 
     padding: 10px 0;
+    margin: 20px 0 10px 0;
 }
 
 h2 {
     font-weight: 400;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 16px;
     padding: 5px 0;
+    margin: 10px 0;
 }
 
 .h3-wrap {
     background: linear-gradient(180deg,rgba(255, 255, 255, 0) 30%, rgba(204, 218, 209, 0.5) 30%);
-    display: inline-block;
-    margin-top: 10px;
+    display: block;
+    margin: 50px auto 20px auto;
     padding: 0 10px 5px 10px;
+    text-align: center;
+    width: 150px;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
     display: inline-block;
+    text-align: center;
 }
 
 h4 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -169,23 +231,48 @@ h4 {
 }
 
 h5 {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 300;
     padding: 5px 0;
 }
 
 p {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 1.5em;
+    line-height: 2em;
     padding: 10px 0;
 }
 
-nav li a {
-    display:block;
-    width: 110px;
-    font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+a {
+    color: #071013;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-list a:hover {
+    color: #094246;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-list a:visited {
+    color: #094246;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-list li {
+    display: block;
+    margin: 15px 0;
     font-size: 14px;
+    text-align: center;
+}
+
+nav li {
+    display:block;
+    width: 130px;
+    font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+    font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -197,11 +284,11 @@ nav li a {
     text-align: center;
 }
     
-nav li a:hover {
+nav li:hover {
     display: block;
-    width: 110px;
+    width: 130px;
     font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -211,22 +298,205 @@ nav li a:hover {
     background-color: rgba(15, 113, 115, 0.5);
     text-decoration: none;
     text-align: center;
+    cursor: pointer;
 }
 
 li {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5em;
 }
 
 footer h1 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase; 
 }
 
 footer h2 {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 300;
+}
+
+/* start media queries for larger screens */
+
+/* landscape mobile devices */
+@media screen and (min-width: 560px) {
+    body {
+        background-size: 160px;
+    }
+
+    .footer-img {
+        width: 40%;
+        margin-bottom: -60px;
+    }
+}
+
+/* tablets */
+@media screen and (min-width: 760px) {
+    body {
+        background-image: url(https://user-images.githubusercontent.com/39974667/65534637-671cc700-deef-11e9-8123-4c95ae2c2943.png);        
+        background-size: 280px;
+        background-position: top right;
+        background-repeat: no-repeat;
+    }
+
+    header {
+        margin-left: 30px;
+    }
+
+    #about-page, #projects-page, #contact-page {
+        margin: 40px 30px 0 30px;
+    }
+
+    .footer-img {
+        width: 30%;
+        margin-bottom: -60px;
+    }
+
+    /* text styling */
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .h3-wrap {
+        width: 180px;
+    }
+
+    h3 {
+        font-size: 24px;
+        width: 150px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .contact-list li {
+        font-size: 16px;
+    }
+
+    nav li {
+        font-size: 18px;
+    }
+        
+    nav li:hover {
+        font-size: 18px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+    footer h1 {
+        font-size: 16px;
+    }
+
+    footer h2 {
+        font-size: 14px;
+    }
+}
+
+/* desktops */
+@media screen and (min-width: 1000px) {
+    body {
+        background-size: 310px;
+    }
+
+    .project-img {
+        width: 80%;
+    }
+
+    .footer-img {
+        width: 25%;
+        margin-bottom: -60px;
+    }
+
+    nav {
+        margin-top: 40px;
+    }
+
+    /* text styling */
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .h3-wrap {
+        width: 200px;
+        margin: 70px auto 50px auto;
+    }
+
+    h3 {
+        font-size: 26px;
+        width: 180px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .project-function {
+        font-size: 18px;
+        padding: 5px 15px;
+        margin-top: 30px;
+    }
+
+    .project-function:hover {
+        font-size: 18px;
+        padding: 5px 15px;
+        margin-top: 30px;
+    }
+
+    .contact-list li {
+        font-size: 16px;
+    }
+
+    nav li {
+        font-size: 20px;
+        width: 160px;
+    }
+        
+    nav li:hover {
+        font-size: 20px;
+        width: 160px;
+    }
+
+    li {
+        font-size: 18px;
+    }
+
+    footer h1 {
+        font-size: 20px;
+    }
+
+    footer h2 {
+        font-size: 16px;
+    }
 }

@@ -6,7 +6,6 @@
         <meta name='description' content='portfolio site html wireframe'>
         <meta name='viewport' content='width=device-width'>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
         <link href='main.css' rel='stylesheet'/>
         <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -17,17 +16,18 @@
         <header>
             <h1 id='title'>Elizabeth M Paparone</h1>
             <h2 id='tagline'>Full-Stack Developer, Web Designer</h2>
-            <nav class='main-nav'>
+            <nav class='js-main-nav'>
                 <ul>
-                    <li><a class='nav-button' href='.nav'>About Me</a></li>
-                    <li><a class='nav-button' href='.nav'>Projects</a></li>
-                    <li><a class='nav-button' href='.nav'>Contact</a></li>
+                    <li id='js-about-nav'>About Me</li>
+                    <li id='js-projects-nav'>Projects</li>
+                    <li id='js-contact-nav'>Contact</li>
+                    
                 </ul>
             </nav>
         </header>
         <main>
-            <section class='about-page'>
-                <!-- image will go here <img> -->
+            <section class='js-about-page current' id='about-page'>
+                <img class='about-img' src='https://user-images.githubusercontent.com/39974667/65378504-bfae5300-dca8-11e9-9497-9a5595674dcd.png' alt='Elizabeth Paparone headshot'>
                 <div class='h3-wrap'>
                     <h3 class='page-title'>About Me</h3>
                 </div>
@@ -48,56 +48,60 @@
                 </article>
             </section>
 
-            <section class='projects-page'>
-                <!-- image will go here <img> -->
+            <section class='js-projects-page hide' id='projects-page'>
                 <div class='h3-wrap'>
                     <h3 class='page-title'>Projects</h3>
                 </div>
                 <section class='project-list'>
-                <!-- this will function as an array of objects so it can easily be added to -->
                     <section class='project-item'>
                         <h4>Quiz App</h4>
                         <h5>Concept, Design, Development</h5>
-                        <!-- image will go here <img> -->
+                        <ul class='tech-used'>
+                            <li><img class='tech-icon' alt='html5' src='https://user-images.githubusercontent.com/39974667/65378555-81656380-dca9-11e9-974f-d6685529fefd.png'></li>
+                            <li><img class='tech-icon' alt='css3' src='https://user-images.githubusercontent.com/39974667/65378556-82969080-dca9-11e9-9795-61680f53c1dc.png'></li>
+                            <li><img class='tech-icon' alt='javascript' src='https://user-images.githubusercontent.com/39974667/65378554-80343680-dca9-11e9-9883-a37f69c4a026.png'></li>
+                        </ul>
+                        <img class='project-img' src='https://user-images.githubusercontent.com/39974667/65378501-bfae5300-dca8-11e9-878b-034d20808977.png' alt='quiz app mockups' > 
                         <p class='project-description'>
                                 AstroQuiz is a Buzzfeed-style quiz app that prompts users to answer a series of astrology quiz questions 
                                 and provides feedback tailored to their performance. It provides a mobile-friendly, accessible UI using 
                                 DOM manipulation. 
                         </p>
-                        <ul class='tech-used'>
-                            <li><!--icon here-->HTML5</li>
-                            <li><!--icon here-->CSS3</li>
-                            <li><!--icon here-->JavaScript</li>
-                        </ul>
-                        <button type='submit' class='project-function' name='Live Site'>Live</button>
-                        <button type='submit' class='project-function' name='Site Repo'>Repo</button>
+                        <div class='project-links'>
+                            <a role='external-link' class='project-function' href='https://epaparone.github.io/astrology-quiz/' id='quiz-app-live-site' target='_blank'>Live</a>
+                            <a role='external-link' class='project-function' href='https://github.com/epaparone/astrology-quiz' id='quiz-app-repo' target='_blank'>Repo</a>
+                        </div>
                     </section>
                 </section>
             </section>
 
-            <section class='contact-page'>
+            <section class='js-contact-page hide' id='contact-page'>
                 <div class='h3-wrap'>
                     <h3 class='page-title'>Contact</h3>
                 </div>
-                <p>Currently seeking a full time junior developer role.</p>
-                <ul class='contact-list'>
-                    <li><a href='.link'>Email</a></li>
-                    <li><a href='.link'>LinkedIn</a></li>
-                    <li><a href='.link'>GitHub</a></li>
-                    <li><a href='.link'>W&W</a></li>
-                </ul>
+                <article class='contact-info'>
+                    <p>Currently seeking a full time junior developer role.</p>
+                    <ul class='contact-list'>
+                        <li><a role='external link' class='contact-link' id='email-link' href='mailto: paparoneelizabeth@gmail.com'><img class='contact-icon' src='https://user-images.githubusercontent.com/39974667/65378406-50842f00-dca7-11e9-8b73-046fa6936e56.png' alt='email icon'><br>paparoneelizabeth@gmail.com</a></li>
+                        <li><a role='external link' class='contact-link' id='linkedin-link' href='https://www.linkedin.com/in/elizabeth-paparone-374b4a131/'><img class='contact-icon' src='https://user-images.githubusercontent.com/39974667/65378401-48c48a80-dca7-11e9-9a5c-354b18145399.png' alt='linkedin icon'><br>linkedin.com/in/elizabeth-paparone-374b4a131/</a></li>
+                        <li><a role='external link' class='contact-link' id='github-link' href='https://github.com/epaparone'><img class='contact-icon' src='https://user-images.githubusercontent.com/39974667/65378399-48c48a80-dca7-11e9-9b8d-4ae79de7d68c.png' alt='github icon'><br>github.com/epaparone</a></li>
+                        <li><a role='external link' class='contact-link' id='wolf&wing-creative-link' href='https://www.wolfandwingcreative.com/'><img class='contact-icon' src='https://user-images.githubusercontent.com/39974667/65378403-48c48a80-dca7-11e9-9955-4460e16448c9.png' alt='wolf & wing creative icon'><br>wolfandwingcreative.com/</a></li>
+                    </ul>
+                </article>
             </section>
         </main>
         <footer>
-            <!-- logo/image will go here <img> -->
-            <h1>Elizabeth M Paparone</h1>
-            <h2>Full-Stack Developer, Web Designer.</h2>
-            <ul class='footer-nav'>
-                <li><a>Email</a></li>
-                <li><a>LinkedIn</a></li>
-                <li><a>GitHub</a></li>
-                <li><a>W&W</a></li>
-            </ul>
+            <img class='footer-img' src='https://user-images.githubusercontent.com/39974667/65379014-e53f5a80-dcb0-11e9-8f06-d1c9d5d83e94.png' alt='abstract mountains'>
+            <section class='footer-info'>
+                <h1>Elizabeth M Paparone</h1>
+                <h2>Full-Stack Developer, Web Designer.</h2>
+                <ul class='footer-nav'>
+                        <li><a role='external link' class='contact-link' id='email-link' href='https://www.linkedin.com/in/elizabeth-paparone-374b4a131/'><img class='contact-icon' src='https://user-images.githubusercontent.com/39974667/65378405-50842f00-dca7-11e9-801e-573dd1e8b6ee.png' alt='email icon'></a></li>
+                        <li><a role='external link' class='contact-link' id='linkedin-link' href='https://www.linkedin.com/in/elizabeth-paparone-374b4a131/'><img class='contact-icon' src='https://user-images.githubusercontent.com/39974667/65378400-48c48a80-dca7-11e9-9ba7-cddfc31e018c.png' alt='linkedin icon'></a></li>
+                        <li><a role='external link' class='contact-link' id='github-link' href='https://github.com/epaparone'><img class='contact-icon' src='https://user-images.githubusercontent.com/39974667/65378398-48c48a80-dca7-11e9-8d96-4ecc5e4ac35c.png' alt='github icon'></a></li>
+                        <li><a role='external link' class='contact-link' id='wolf&wing-creative-link' href='https://www.wolfandwingcreative.com/'><img class='contact-icon' src='https://user-images.githubusercontent.com/39974667/65378402-48c48a80-dca7-11e9-8a1d-652138923ad4.png' alt='wolf & wing creative icon'></a></li>
+                </ul>
+            </section>
         </footer>
     </body>
 </html>
