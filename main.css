@@ -252,6 +252,11 @@ a {
     cursor: pointer;
 }
 
+.capstone {
+    color: #094246;
+    text-decoration: underline;
+}
+
 .contact-list a:hover {
     color: #094246;
     text-decoration: none;
